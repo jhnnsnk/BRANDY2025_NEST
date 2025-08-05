@@ -1,0 +1,44 @@
+
+model izhikevich_neuron:
+    parameters:
+        a real = 0.02             # Describes time scale of recovery variable
+        b real = 0.2              # Sensitivity of recovery variable
+        c mV = -50 mV             # After-spike reset value of V_m
+        d real = 2.0              # After-spike reset value of U_m
+        V_m_init mV = -65 mV      # Initial membrane potential
+        V_min mV = -inf * mV      # Absolute lower value for the membrane potential.
+        V_th mV = 30 mV           # Threshold potential
+
+        # Constant external input current
+        I_e pA = 0 pA
+
+    state:
+        V_m mV = V_m_init         # Membrane potential
+        U_m real = b * V_m_init   # Membrane potential recovery variable
+
+    equations:
+        V_m' = (0.04 * V_m * V_m / mV + 5.0 * V_m + (140 - U_m) * mV + ((I_e + I_stim) * GOhm)) / ms
+        U_m' = a * (b * V_m - U_m * mV) / (mV * ms)
+
+    input:
+        spikes <- spike
+        I_stim pA <- continuous
+
+    output:
+        spike
+
+    update:
+        integrate_odes()
+
+        # Add synaptic current
+        V_m += spikes * mV * s
+
+        # lower bound of membrane potential
+        V_m = max(V_min, V_m)
+
+    onCondition(V_m >= V_th):
+        # threshold crossing
+        V_m = c
+        U_m += d
+        emit_spike()
+
