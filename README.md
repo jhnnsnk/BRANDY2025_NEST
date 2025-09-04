@@ -3,6 +3,8 @@
 This material is publicly available at https://github.com/jhnnsnk/BRANDY2025_NEST.
 
 | :memo:  Please fork this repository and then clone the fork if you want to push your changes to GitHub. |
+| --- |
+| :zap:  **Do not clone this repository directly.** |
 
 **BRANDY BRAin Dynamics academY EBRAINS-Italy school**  
 Sardinia, Italy  
@@ -12,7 +14,7 @@ https://brandy.ebrains-italy.eu
 Presented by Johanna Senk (j.senk@sussex.ac.uk) and Ariel Shmilli (a.shmilli@sussex.ac.uk).  
 This tutorial gives an introduction and demonstration into modeling of the dynamics of spiking neuronal networks, explaining graphical as well as programmatic approaches on the basis of the simulation code NEST. Examples and exercises make use of the graphical user interface **NEST Desktop** and Jupyter notebooks for **PyNEST** and **NESTML** code using the EBRAINS infrastructure.
 
-For documentation and background reading, see for
+For documentation and background reading:
 - NEST in general: https://nest-desktop.readthedocs.io
 - NEST Desktop: https://nest-simulator.readthedocs.io
 - NESTML: https://nestml.readthedocs.io 
