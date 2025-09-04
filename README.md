@@ -15,8 +15,8 @@ Presented by Johanna Senk (j.senk@sussex.ac.uk) and Ariel Shmilli (a.shmilli@sus
 This tutorial gives an introduction and demonstration into modeling of the dynamics of spiking neuronal networks, explaining graphical as well as programmatic approaches on the basis of the simulation code NEST. Examples and exercises make use of the graphical user interface **NEST Desktop** and Jupyter notebooks for **PyNEST** and **NESTML** code using the EBRAINS infrastructure.
 
 For documentation and background reading:
-- NEST in general: https://nest-desktop.readthedocs.io
-- NEST Desktop: https://nest-simulator.readthedocs.io
+- NEST in general: https://nest-simulator.readthedocs.io
+- NEST Desktop: https://nest-desktop.readthedocs.io
 - NESTML: https://nestml.readthedocs.io 
 
 ## EBRAINS
