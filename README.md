@@ -1,4 +1,4 @@
-# Material for NEST-tutorial at BRANDY 2025
+# Material for NEST tutorial at BRANDY 2025
 
 This material is publicly available at https://github.com/jhnnsnk/BRANDY2025_NEST.
 
